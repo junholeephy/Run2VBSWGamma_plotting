@@ -15,12 +15,12 @@
 // Header file for the classes stored in the TTree if any.
 
 // Fixed size dimensions of array or collections stored in the TTree if any.
-const Int_t kMaxpassFilter_HBHE = 1;
-const Int_t kMaxpassFilter_HBHEIso = 1;
-const Int_t kMaxpassFilter_globalTightHalo = 1;
-const Int_t kMaxpassFilter_ECALDeadCell = 1;
-const Int_t kMaxpassFilter_GoodVtx = 1;
-const Int_t kMaxpassFilter_EEBadSc = 1;
+//const Int_t kMaxpassFilter_HBHE = 1;
+//const Int_t kMaxpassFilter_HBHEIso = 1;
+//const Int_t kMaxpassFilter_globalTightHalo = 1;
+//const Int_t kMaxpassFilter_ECALDeadCell = 1;
+//const Int_t kMaxpassFilter_GoodVtx = 1;
+//const Int_t kMaxpassFilter_EEBadSc = 1;
 
 class xx {
 public :
@@ -81,15 +81,25 @@ public :
    Bool_t          passEleVetonew;
    Bool_t          passPixelSeedVeto;
    Double_t        photonet;
+   Double_t		   photonet_f;
    Double_t        photoneta;
+   Double_t        photoneta_f;
    Double_t        photonphi;
+   Double_t        photonphi_f;
    Double_t        photone;
+   Double_t        photone_f;
    Double_t        photonsieie;
+   Double_t        photonsieie_f;
    Double_t        photonphoiso;
+   Double_t        photonphoiso_f;
    Double_t        photonchiso;
+   Double_t        photonchiso_f;
    Double_t        photonnhiso;
+   Double_t        photonnhiso_f;
    Int_t           iphoton;
+   Int_t           iphoton_f;
    Double_t        drla;
+   Double_t        drla_f;
    Int_t           isTrue;
    Int_t           isprompt;
    Double_t        ak4jet_pt[6];
@@ -99,32 +109,51 @@ public :
    Double_t        ak4jet_csv[6];
    Double_t        ak4jet_icsv[6];
    Double_t        jet1pt;
+   Double_t        jet1pt_f;
    Double_t        jet1eta;
+   Double_t        jet1eta_f;
    Double_t        jet1phi;
+   Double_t        jet1phi_f;
    Double_t        jet1e;
+   Double_t        jet1e_f;
    Double_t        jet1csv;
+   Double_t        jet1csv_f;
    Double_t        jet1icsv;
+   Double_t        jet1icsv_f;
    Double_t        jet2pt;
+   Double_t        jet2pt_f;
    Double_t        jet2eta;
+   Double_t        jet2eta_f;
    Double_t        jet2phi;
+   Double_t        jet2phi_f;
    Double_t        jet2e;
+   Double_t        jet2e_f;
    Double_t        jet2csv;
+   Double_t        jet2csv_f;
    Double_t        jet2icsv;
+   Double_t        jet2icsv_f;
    Double_t        drj1a;
+   Double_t        drj1a_f;
    Double_t        drj2a;
+   Double_t        drj2a_f;
    Double_t        drj1l;
+   Double_t        drj1l_f;
    Double_t        drj2l;
+   Double_t        drj2l_f;
    Double_t        Mjj;
+   Double_t        Mjj_f;
    Double_t        deltaeta;
+   Double_t        deltaeta_f;
    Double_t        zepp;
+   Double_t        zepp_f;
    Double_t        ptlep1;
    Double_t		   muisolation;
    Double_t 	   d0vtx;
    Double_t	  	   dzvtx;
    Double_t        etalep1;
    Double_t        philep1;
-   Double_t        met;
-   Double_t        metPhi;
+//   Double_t        met;
+//   Double_t        metPhi;
    Double_t        j1metPhi;
    Double_t        j2metPhi;
    Double_t        METraw_et;
@@ -203,16 +232,26 @@ public :
    TBranch        *b_passEleVeto;   //!
    TBranch        *b_passEleVetonew;   //!
    TBranch        *b_passPixelSeedVeto;   //!
-   TBranch        *b_photonet;   //!
+   TBranch        *b_photonet;   //!i
+   TBranch        *b_photonet_f;
    TBranch        *b_photoneta;   //!
+   TBranch        *b_photoneta_f;
    TBranch        *b_photonphi;   //!
+   TBranch        *b_photonphi_f; 
    TBranch        *b_photone;   //!
+   TBranch        *b_photone_f; 
    TBranch        *b_photonsieie;   //!
+   TBranch        *b_photonsieie_f; 
    TBranch        *b_photonphoiso;   //!
+   TBranch        *b_photonphoiso_f;
    TBranch        *b_photonchiso;   //!
+   TBranch        *b_photonchiso_f; 
    TBranch        *b_photonnhiso;   //!
+   TBranch        *b_photonnhiso_f;
    TBranch        *b_iphoton;   //!
+   TBranch        *b_iphoton_f;
    TBranch        *b_drla;   //!
+   TBranch        *b_drla_f;
    TBranch        *b_isTrue;   //!
    TBranch        *b_isprompt;   //!
    TBranch        *b_ak4jet_pt;   //!
@@ -222,32 +261,51 @@ public :
    TBranch        *b_ak4jet_csv;   //!
    TBranch        *b_ak4jet_icsv;   //!
    TBranch        *b_jet1pt;   //!
+   TBranch        *b_jet1pt_f;
    TBranch        *b_jet1eta;   //!
+   TBranch        *b_jet1eta_f; 
    TBranch        *b_jet1phi;   //!
+   TBranch        *b_jet1phi_f;
    TBranch        *b_jet1e;   //!
+   TBranch        *b_jet1e_f;
    TBranch        *b_jet1csv;   //!
+   TBranch        *b_jet1csv_f;
    TBranch        *b_jet1icsv;   //!
+   TBranch        *b_jet1icsv_f;
    TBranch        *b_jet2pt;   //!
+   TBranch        *b_jet2pt_f;
    TBranch        *b_jet2eta;   //!
+   TBranch        *b_jet2eta_f;
    TBranch        *b_jet2phi;   //!
+   TBranch        *b_jet2phi_f;
    TBranch        *b_jet2e;   //!
+   TBranch        *b_jet2e_f; 
    TBranch        *b_jet2csv;   //!
+   TBranch        *b_jet2csv_f;
    TBranch        *b_jet2icsv;   //!
+   TBranch        *b_jet2icsv_f;
    TBranch        *b_drj1a;   //!
+   TBranch        *b_drj1a_f;
    TBranch        *b_drj2a;   //!
+   TBranch        *b_drj2a_f;
    TBranch        *b_drj1l;   //!
+   TBranch        *b_drj1l_f;
    TBranch        *b_drj2l;   //!
+   TBranch        *b_drj2l_f; 
    TBranch        *b_Mjj;   //!
+   TBranch        *b_Mjj_f;
    TBranch        *b_deltaeta;   //!
+   TBranch        *b_deltaeta_f;
    TBranch        *b_zepp;   //!
+   TBranch        *b_zepp_f;
    TBranch        *b_ptlep1;   //!
    TBranch		  *b_muisolation;
    TBranch		  *b_d0vtx;
    TBranch 		  *b_dzvtx;
    TBranch        *b_etalep1;   //!
    TBranch        *b_philep1;   //!
-   TBranch        *b_met;   //!
-   TBranch        *b_metPhi;   //!
+//   TBranch        *b_met;   //!
+//   TBranch        *b_metPhi;   //!
    TBranch        *b_j1metPhi;   //!
    TBranch        *b_j2metPhi;   //!
    TBranch        *b_METraw_et;   //!
@@ -280,8 +338,8 @@ public :
 //Li
 
    virtual ~xx();
-   virtual Int_t    Cut(Long64_t entry);
-   virtual Int_t    GetEntry(Long64_t entry);
+//   virtual Int_t    Cut(Long64_t entry);
+//   virtual Int_t    GetEntry(Long64_t entry);
    virtual Long64_t LoadTree(Long64_t entry);
    virtual void     Init(TTree *tree);
    virtual void     Loop();
@@ -326,13 +384,14 @@ xx::~xx()
    if (!fChain) return;
    delete fChain->GetCurrentFile();
 }
-
+/*
 Int_t xx::GetEntry(Long64_t entry)
 {
 // Read contents of entry.
    if (!fChain) return 0;
    return fChain->GetEntry(entry);
 }
+*/
 Long64_t xx::LoadTree(Long64_t entry)
 {
 // Set the environment to read one entry
@@ -384,13 +443,23 @@ void xx::Init(TTree *tree)
    ExTree->Branch("nlooseeles", &nlooseeles, "nlooseeles/I");
    ExTree->Branch("nloosemus", &nloosemus, "nloosemus/I");
    ExTree->Branch("photonet", &photonet, "photonet/D");
+   ExTree->Branch("photonet_f", &photonet_f, "photonet_f/D");
    ExTree->Branch("photoneta", &photoneta, "photoneta/D");
+   ExTree->Branch("photoneta_f", &photoneta_f, "photoneta_f/D");
    ExTree->Branch("photonphi", &photonphi, "photonphi/D");
+   ExTree->Branch("photonphi_f", &photonphi_f, "photonphi_f/D");
    ExTree->Branch("photone", &photone, "photone/D");
+   ExTree->Branch("photone_f", &photone_f, "photone_f/D");
    ExTree->Branch("photonsieie", &photonsieie, "photonsieie/D");
+   ExTree->Branch("photonsieie_f", &photonsieie_f, "photonsieie_f/D");
    ExTree->Branch("photonphoiso", &photonphoiso, "photonphoiso/D");
+   ExTree->Branch("photonphoiso_f", &photonphoiso_f, "photonphoiso_f/D");
    ExTree->Branch("photonchiso", &photonchiso, "photonchiso/D");
+   ExTree->Branch("photonchiso_f", &photonchiso_f, "photonchiso_f/D");
    ExTree->Branch("photonnhiso", &photonnhiso, "photonnhiso/D");
+   ExTree->Branch("photonnhiso_f", &photonnhiso_f, "photonnhiso_f/D");
+   ExTree->Branch("iphoton", &iphoton, "iphoton/I");
+   ExTree->Branch("iphoton_f",&iphoton_f, "iphoton_f/I");
    ExTree->Branch("genMET", &genMET, "genMET/D");
    ExTree->Branch("MET_et", &MET_et, "MET_et/D");
    ExTree->Branch("HLT_Ele1", &HLT_Ele1, "HLT_Ele1/I");
@@ -440,24 +509,35 @@ void xx::Init(TTree *tree)
    ExTree->Branch("ak4jet_csv", ak4jet_csv, "ak4jet_csv[6]/D");
    ExTree->Branch("ak4jet_icsv", ak4jet_icsv, "ak4jet_icsv[6]/D");
    ExTree->Branch("jet1pt", &jet1pt, "jet1pt/D");
+   ExTree->Branch("jet1pt_f", &jet1pt_f, "jet1pt_f/D");
    ExTree->Branch("jet1eta", &jet1eta, "jet1eta/D");
+   ExTree->Branch("jet1eta_f", &jet1eta_f, "jet1eta_f/D");
    ExTree->Branch("jet1phi", &jet1phi, "jet1phi/D");
+   ExTree->Branch("jet1phi_f", &jet1phi_f, "jet1phi_f/D");
    ExTree->Branch("jet1e", &jet1e, "jet1e/D");
+   ExTree->Branch("jet1e_f", &jet1e_f, "jet1e_f/D");
    ExTree->Branch("jet2pt", &jet2pt, "jet2pt/D");
+   ExTree->Branch("jet2pt_f", &jet2pt_f, "jet2pt_f/D");
    ExTree->Branch("jet2eta", &jet2eta, "jet2eta/D");
+   ExTree->Branch("jet2eta_f", &jet2eta_f, "jet2eta_f/D");
    ExTree->Branch("jet2phi", &jet2phi, "jet2phi/D");
+   ExTree->Branch("jet2phi_f", &jet2phi_f, "jet2phi_f/D");
    ExTree->Branch("jet2e", &jet2e, "jet2e/D");
+   ExTree->Branch("jet2e_f", &jet2e_f, "jet2e_f/D");
    ExTree->Branch("Mjj", &Mjj, "Mjj/D");
+   ExTree->Branch("Mjj_f", &Mjj_f, "Mjj_f/D");
    ExTree->Branch("deltaeta", &deltaeta, "deltaeta/D");
+   ExTree->Branch("deltaeta_f", &deltaeta_f, "deltaeta_f/D");
    ExTree->Branch("zepp", &zepp, "zepp/D");
+   ExTree->Branch("zepp_f", &zepp_f, "zepp_f/D");
     ExTree->Branch("ptlep1",&ptlep1,"ptlep1/D");
     ExTree->Branch("muisolation", &muisolation, "muisolation/D");
     ExTree->Branch("d0vtx", &d0vtx, "d0vtx/D");
 	ExTree->Branch("dzvtx", &dzvtx ,"dzvtx/D");
     ExTree->Branch("etalep1",&etalep1,"etalep1/D");
     ExTree->Branch("philep1",&philep1,"philep1/D");
-    ExTree->Branch("met",&met,"met/D");
-    ExTree->Branch("metPhi",&metPhi,"metPhi/D");
+//    ExTree->Branch("met",&met,"met/D");
+//    ExTree->Branch("metPhi",&metPhi,"metPhi/D");
     ExTree->Branch("j1metPhi",&j1metPhi,"j1metPhi/D");
     ExTree->Branch("j2metPhi",&j2metPhi,"j2metPhi/D");
     ExTree->Branch("METraw_et",&METraw_et,"METraw_et/D");
@@ -536,15 +616,25 @@ void xx::Init(TTree *tree)
    fChain->SetBranchAddress("passEleVetonew", &passEleVetonew, &b_passEleVetonew);
    fChain->SetBranchAddress("passPixelSeedVeto", &passPixelSeedVeto, &b_passPixelSeedVeto);
    fChain->SetBranchAddress("photonet", &photonet, &b_photonet);
+   fChain->SetBranchAddress("photonet_f", &photonet_f, &b_photonet_f);
    fChain->SetBranchAddress("photoneta", &photoneta, &b_photoneta);
+   fChain->SetBranchAddress("photoneta_f", &photoneta_f, &b_photoneta_f);
    fChain->SetBranchAddress("photonphi", &photonphi, &b_photonphi);
+   fChain->SetBranchAddress("photonphi_f", &photonphi_f, &b_photonphi_f);
    fChain->SetBranchAddress("photone", &photone, &b_photone);
+   fChain->SetBranchAddress("photone_f", &photone_f, &b_photone_f);
    fChain->SetBranchAddress("photonsieie", &photonsieie, &b_photonsieie);
+   fChain->SetBranchAddress("photonsieie_f", &photonsieie_f, &b_photonsieie_f);
    fChain->SetBranchAddress("photonphoiso", &photonphoiso, &b_photonphoiso);
+   fChain->SetBranchAddress("photonphoiso_f", &photonphoiso_f, &b_photonphoiso_f);
    fChain->SetBranchAddress("photonchiso", &photonchiso, &b_photonchiso);
+   fChain->SetBranchAddress("photonchiso_f", &photonchiso_f, &b_photonchiso_f);
    fChain->SetBranchAddress("photonnhiso", &photonnhiso, &b_photonnhiso);
+   fChain->SetBranchAddress("photonnhiso_f", &photonnhiso_f, &b_photonnhiso_f);
    fChain->SetBranchAddress("iphoton", &iphoton, &b_iphoton);
+   fChain->SetBranchAddress("iphoton_f", &iphoton_f, &b_iphoton_f);
    fChain->SetBranchAddress("drla", &drla, &b_drla);
+   fChain->SetBranchAddress("drla_f", &drla_f, &b_drla_f);
    fChain->SetBranchAddress("isTrue", &isTrue, &b_isTrue);
    fChain->SetBranchAddress("isprompt", &isprompt, &b_isprompt);
    fChain->SetBranchAddress("ak4jet_pt", ak4jet_pt, &b_ak4jet_pt);
@@ -554,32 +644,51 @@ void xx::Init(TTree *tree)
    fChain->SetBranchAddress("ak4jet_csv", ak4jet_csv, &b_ak4jet_csv);
    fChain->SetBranchAddress("ak4jet_icsv", ak4jet_icsv, &b_ak4jet_icsv);
    fChain->SetBranchAddress("jet1pt", &jet1pt, &b_jet1pt);
+   fChain->SetBranchAddress("jet1pt_f", &jet1pt_f, &b_jet1pt_f);
    fChain->SetBranchAddress("jet1eta", &jet1eta, &b_jet1eta);
+   fChain->SetBranchAddress("jet1eta_f", &jet1eta_f, &b_jet1eta_f);
    fChain->SetBranchAddress("jet1phi", &jet1phi, &b_jet1phi);
+   fChain->SetBranchAddress("jet1phi_f", &jet1phi_f, &b_jet1phi_f);
    fChain->SetBranchAddress("jet1e", &jet1e, &b_jet1e);
+   fChain->SetBranchAddress("jet1e_f", &jet1e_f, &b_jet1e_f);
    fChain->SetBranchAddress("jet1csv", &jet1csv, &b_jet1csv);
+   fChain->SetBranchAddress("jet1csv_f", &jet1csv_f, &b_jet1csv_f);
    fChain->SetBranchAddress("jet1icsv", &jet1icsv, &b_jet1icsv);
+   fChain->SetBranchAddress("jet1icsv_f", &jet1icsv_f, &b_jet1icsv_f);
    fChain->SetBranchAddress("jet2pt", &jet2pt, &b_jet2pt);
+   fChain->SetBranchAddress("jet2pt_f", &jet2pt_f, &b_jet2pt_f);
    fChain->SetBranchAddress("jet2eta", &jet2eta, &b_jet2eta);
+   fChain->SetBranchAddress("jet2eta_f", &jet2eta_f, &b_jet2eta_f);
    fChain->SetBranchAddress("jet2phi", &jet2phi, &b_jet2phi);
+   fChain->SetBranchAddress("jet2phi_f", &jet2phi_f, &b_jet2phi_f);
    fChain->SetBranchAddress("jet2e", &jet2e, &b_jet2e);
+   fChain->SetBranchAddress("jet2e_f", &jet2e_f, &b_jet2e_f);
    fChain->SetBranchAddress("jet2csv", &jet2csv, &b_jet2csv);
+   fChain->SetBranchAddress("jet2csv_f", &jet2csv_f, &b_jet2csv_f);
    fChain->SetBranchAddress("jet2icsv", &jet2icsv, &b_jet2icsv);
+   fChain->SetBranchAddress("jet2icsv_f", &jet2icsv_f, &b_jet2icsv_f);
    fChain->SetBranchAddress("drj1a", &drj1a, &b_drj1a);
+   fChain->SetBranchAddress("drj1a_f", &drj1a_f, &b_drj1a_f);
    fChain->SetBranchAddress("drj2a", &drj2a, &b_drj2a);
+   fChain->SetBranchAddress("drj2a_f", &drj2a_f, &b_drj2a_f);
    fChain->SetBranchAddress("drj1l", &drj1l, &b_drj1l);
+   fChain->SetBranchAddress("drj1l_f", &drj1l_f, &b_drj1l_f);
    fChain->SetBranchAddress("drj2l", &drj2l, &b_drj2l);
+   fChain->SetBranchAddress("drj2l_f", &drj2l_f, &b_drj2l_f);
    fChain->SetBranchAddress("Mjj", &Mjj, &b_Mjj);
+   fChain->SetBranchAddress("Mjj_f", &Mjj_f, &b_Mjj_f);
    fChain->SetBranchAddress("deltaeta", &deltaeta, &b_deltaeta);
+   fChain->SetBranchAddress("deltaeta_f", &deltaeta_f, &b_deltaeta_f);
    fChain->SetBranchAddress("zepp", &zepp, &b_zepp);
+   fChain->SetBranchAddress("zepp_f", &zepp_f, &b_zepp_f);
    fChain->SetBranchAddress("ptlep1", &ptlep1, &b_ptlep1);
    fChain->SetBranchAddress("muisolation", &muisolation, &b_muisolation);
    fChain->SetBranchAddress("d0vtx", &d0vtx, &b_d0vtx);
    fChain->SetBranchAddress("dzvtx", &dzvtx, &b_dzvtx);
    fChain->SetBranchAddress("etalep1", &etalep1, &b_etalep1);
    fChain->SetBranchAddress("philep1", &philep1, &b_philep1);
-   fChain->SetBranchAddress("met", &met, &b_met);
-   fChain->SetBranchAddress("metPhi", &metPhi, &b_metPhi);
+//   fChain->SetBranchAddress("met", &met, &b_met);
+//   fChain->SetBranchAddress("metPhi", &metPhi, &b_metPhi);
    fChain->SetBranchAddress("j1metPhi", &j1metPhi, &b_j1metPhi);
    fChain->SetBranchAddress("j2metPhi", &j2metPhi, &b_j2metPhi);
    fChain->SetBranchAddress("METraw_et", &METraw_et, &b_METraw_et);
@@ -636,7 +745,7 @@ void xx::endJob() {
    delete fout;
 }
 //Li
-
+/*
 Int_t xx::Cut(Long64_t entry)
 {
 // This function may be called from Loop.
@@ -644,4 +753,5 @@ Int_t xx::Cut(Long64_t entry)
 // returns -1 otherwise.
    return 1;
 }
+*/
 #endif // #ifdef xx_cxx
