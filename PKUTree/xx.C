@@ -65,18 +65,27 @@ void xx::Loop()
 //     if(m_dataset=="outSMOCT.root"){ scalef=1.0; }
 //     if(m_dataset=="outSingleMuon_Run2016B.root"){ scalef=1.0; }
 //     if(m_dataset=="outSingleMuon_Run2016C.root"){ scalef=1.0; }
-//	 if(m_dataset=="outSingleMuon_Run2016D.root"){ scalef=1.0; }
-//     if(m_dataset=="outSingleMuon_Run2016E-PromptReco-v2.root"){ scalef=1.0; }
+	 if(m_dataset=="outSingleMuon_Run2016B.root"){ scalef=1.0; }
+	 if(m_dataset=="outSingleMuon_Run2016C.root"){ scalef=1.0; }
+	 if(m_dataset=="outSingleMuon_Run2016D.root"){ scalef=1.0; }
+	 if(m_dataset=="outSingleMuon_Run2016E.root"){ scalef=1.0; }
+	 if(m_dataset=="outSingleMuon_Run2016F.root"){ scalef=1.0; }
+	 if(m_dataset=="outSingleMuon_Run2016G.root"){ scalef=1.0; }
+	 if(m_dataset=="outSingleMuon_Run2016H.root"){ scalef=1.0; }
+	 //     if(m_dataset=="outSingleMuon_Run2016E-PromptReco-v2.root"){ scalef=1.0; }
 // 	 if(m_dataset=="outSingleMuon_preICHEP.root"){ scalef=1.0; }
-	 if(m_dataset=="outSMU.root"){ scalef=1.0; }
+//	 if(m_dataset=="outSMU.root"){ scalef=1.0; }
+	 if(m_dataset=="outWWA_sig.root") {scalef=1000*0.2147/float(npp-nmm)*fabs(theWeight)/theWeight;}
+	 if(m_dataset=="outWZA_sig.root") {scalef=1000*0.04123/float(npp-nmm)*fabs(theWeight)/theWeight;}
 	 if(m_dataset=="outVBS_WGamma_signal.root") {scalef=1000*0.776/float(npp-nmm)*fabs(theWeight)/theWeight;}
-	 if(m_dataset=="outLNuAJJ_EWK.root") {scalef=1000*0.776/float(npp-nmm)*fabs(theWeight)/theWeight;}
+	 if(m_dataset=="outVBSWA_signal.root") {scalef=1000*0.776/float(npp-nmm)*fabs(theWeight)/theWeight;}	
+//	 if(m_dataset=="outLNuAJJ_EWK.root") {scalef=1000*0.776/float(npp-nmm)*fabs(theWeight)/theWeight;}
 //	 if(m_dataset=="outST_s-channel.root"){ scalef=1000.*11.36*0.322/float(npp-nmm)*fabs(theWeight)/theWeight; }
-     if(m_dataset=="outST_s.root"){ scalef=1000.*11.36*0.322/float(npp-nmm)*fabs(theWeight)/theWeight; }
+     if(m_dataset=="outST_s.root"){ scalef=1000.*3.36/float(npp-nmm)*fabs(theWeight)/theWeight; }
 //	 if(m_dataset=="outST_t-channel_antitop.root"){ scalef=1000.*80.95*0.322/float(npp-nmm)*fabs(theWeight)/theWeight; }
-     if(m_dataset=="outST_t_anti.root"){ scalef=1000.*80.95*0.322/float(npp-nmm)*fabs(theWeight)/theWeight; }
+     if(m_dataset=="outST_t_anti.root"){ scalef=1000.*80.95/float(npp-nmm)*fabs(theWeight)/theWeight; }
 //	 if(m_dataset=="outST_t-channel_top.root"){ scalef=1000.*136.02*0.322/float(npp-nmm)*fabs(theWeight)/theWeight; }
-     if(m_dataset=="outST_t-top.root"){ scalef=1000.*136.02*0.322/float(npp-nmm)*fabs(theWeight)/theWeight; }
+     if(m_dataset=="outST_t-top.root"){ scalef=1000.*136.02/float(npp-nmm)*fabs(theWeight)/theWeight; }
 	 if(m_dataset=="outST_tW_antitop.root"){ scalef=1000.*35.85/float(npp-nmm)*fabs(theWeight)/theWeight; }   //10     
 	 if(m_dataset=="outST_tW_top.root"){ scalef=1000.*35.85/float(npp-nmm)*fabs(theWeight)/theWeight; }      //9
      if(m_dataset=="outTTG.root"){ scalef=1000.*3.697/float(npp-nmm)*fabs(theWeight)/theWeight; }      //12
@@ -93,7 +102,7 @@ void xx::Loop()
 
 
 //     if(m_dataset !="outSMOCT.root" && m_dataset !="outSMPROMPT.root" && m_dataset !="outSingleMuon_Run2016B.root" && m_dataset !="outSingleMuon_Run2016C.root" && m_dataset !="outSingleMuon_Run2016D.root" && m_dataset !="outSMU.root"  )  {
-	if(m_dataset !="outSingleMuon_Run2016D.root" ) {  
+	if(m_dataset !="outSingleMuon_Run2016B.root" && m_dataset !="outSingleMuon_Run2016C.root" && m_dataset !="outSingleMuon_Run2016D.root"&& m_dataset !="outSingleMuon_Run2016E.root"&& m_dataset !="outSingleMuon_Run2016F.root"&& m_dataset !="outSingleMuon_Run2016G.root"&& m_dataset !="outSingleMuon_Run2016H.root") {  
 	 pileupWeight=h->GetBinContent(h->GetXaxis()->FindBin(npT));
        // cout<<pileupWeight<<endl;
          }
