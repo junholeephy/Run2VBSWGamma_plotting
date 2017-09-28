@@ -1,10 +1,10 @@
 #include "xx.C"
 //#include "xx.h"
 void runxx() {
-gROOT->LoadMacro("xx.C");
-TString dir="./tree_170916/";
+//gROOT->LoadMacro("xx.C");
+TString dir="./tree_170926/";
 
-ifstream infile("filelist_data");
+ifstream infile("filelist_WVA2");
 //ifstream infile("filelist_170916");
 string buffer; 
 TString infilename;
